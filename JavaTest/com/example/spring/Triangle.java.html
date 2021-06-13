@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Triangle.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Triangle.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.spring</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Triangle {</span>
+
+    <span class="s0">private </span><span class="s1">String aValue</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">String bValue</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">String cValue</span><span class="s0">;</span>
+
+    <span class="s0">public </span><span class="s1">Triangle(String aValue</span><span class="s0">, </span><span class="s1">String bValue</span><span class="s0">, </span><span class="s1">String cValue) {</span>
+        <span class="s0">this</span><span class="s1">.aValue = aValue</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.bValue = bValue</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.cValue = cValue</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s0">public </span><span class="s1">String getaValue() {</span>
+        <span class="s0">return </span><span class="s1">aValue</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">setaValue(String aValue) {</span>
+        <span class="s0">this</span><span class="s1">.aValue = aValue</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s0">public </span><span class="s1">String getbValue() {</span>
+        <span class="s0">return  </span><span class="s1">bValue</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">setbValue(String bValue) {</span>
+        <span class="s0">this</span><span class="s1">.bValue = bValue</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s0">public </span><span class="s1">String getcValue() {</span>
+        <span class="s0">return </span><span class="s1">cValue</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">setcValue(String cValue) {</span>
+        <span class="s0">this</span><span class="s1">.cValue = cValue</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">validateaValue() {</span>
+        <span class="s0">if </span><span class="s1">(</span><span class="s0">this</span><span class="s1">.aValue == </span><span class="s0">null</span><span class="s1">) {</span>
+            <span class="s0">throw new </span><span class="s1">RuntimeException(</span><span class="s2">&quot;You need to type in A side length!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if</span><span class="s1">(</span><span class="s0">this</span><span class="s1">.aValue.startsWith(</span><span class="s2">&quot;0&quot;</span><span class="s1">)) {</span>
+            <span class="s0">throw new </span><span class="s1">RuntimeException(</span><span class="s2">&quot;Triangle length cannot be 0!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if</span><span class="s1">(</span><span class="s0">this</span><span class="s1">.aValue.matches(</span><span class="s2">&quot;//d+&quot;</span><span class="s1">)) {</span>
+            <span class="s0">throw new </span><span class="s1">RuntimeException(</span><span class="s2">&quot;Triangle length can contain only digits!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">validatebValue() {</span>
+        <span class="s0">if </span><span class="s1">(</span><span class="s0">this</span><span class="s1">.bValue == </span><span class="s0">null</span><span class="s1">) {</span>
+            <span class="s0">throw new </span><span class="s1">RuntimeException(</span><span class="s2">&quot;You need to type in B side length!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if</span><span class="s1">(</span><span class="s0">this</span><span class="s1">.bValue.startsWith(</span><span class="s2">&quot;0&quot;</span><span class="s1">)) {</span>
+            <span class="s0">throw new </span><span class="s1">RuntimeException(</span><span class="s2">&quot;Triangle length cannot be 0!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if</span><span class="s1">(</span><span class="s0">this</span><span class="s1">.bValue.matches(</span><span class="s2">&quot;//d+&quot;</span><span class="s1">)) {</span>
+            <span class="s0">throw new </span><span class="s1">RuntimeException(</span><span class="s2">&quot;Triangle length can contain only digits!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">validatecValue() {</span>
+        <span class="s0">if </span><span class="s1">(</span><span class="s0">this</span><span class="s1">.cValue == </span><span class="s0">null</span><span class="s1">) {</span>
+            <span class="s0">throw new </span><span class="s1">RuntimeException(</span><span class="s2">&quot;You need to type in C side length!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if</span><span class="s1">(</span><span class="s0">this</span><span class="s1">.cValue.startsWith(</span><span class="s2">&quot;0&quot;</span><span class="s1">)) {</span>
+            <span class="s0">throw new </span><span class="s1">RuntimeException(</span><span class="s2">&quot;Triangle length cannot be 0!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">if</span><span class="s1">(</span><span class="s0">this</span><span class="s1">.cValue.matches(</span><span class="s2">&quot;//d+&quot;</span><span class="s1">)) {</span>
+            <span class="s0">throw new </span><span class="s1">RuntimeException(</span><span class="s2">&quot;Triangle length can contain only digits!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+<span class="s1">}</span>
+</pre>
+</body>
+</html>

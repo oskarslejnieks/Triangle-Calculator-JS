@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <div class="container">
+        <div class="outside" id="outside">    
+            <canvas id="triangleCanvas"></canvas>
+            <h2 id ="output">Enter the triangle values below</h2>
+        </div>
+            <div class="input">
+                <div class="input-inside">
+                    <label class="A-text">A side</label>
+                    <input type="text" class="enter-number" id="a-value" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
+                    <label class="B-text">B side</label>
+                    <input type="text" class="enter-number" id="b-value" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
+                    <label class="C-text">C side</label>
+                    <input type="text" class="enter-number" id="c-value" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
+                    <button type="button" class="btn-calc" onclick="triangleType()" id="reload">calculate</button>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
